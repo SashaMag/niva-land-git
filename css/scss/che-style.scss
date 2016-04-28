@@ -1,0 +1,127 @@
+@import '_vars';
+@import '_mixins';
+@import '_balloon';
+@import '_form';
+
+body {
+  font-family: $font-regular;
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $breakpoint-1;
+}
+
+.main-image {
+  max-width: 100%;
+}
+
+.controls-block {
+  background-color: rgb(221, 217, 195);
+  margin-top: -4px;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: $font-bold;
+  text-align: center;
+  .main-banner {
+    @include box-sizing;
+    display: inline-block;
+    width: 90%;
+    @include transform-skew(-20deg, 0);
+    border: $border;
+    padding: 18px;
+    background-color: rgb(167, 165, 156);
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 30px;
+    span {
+      display: block;
+      @include transform-skew(20deg, 0);
+    }
+  }
+  .button {
+    display: inline-block;
+    vertical-align: middle;
+    border: $border;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    padding-top: 17px;
+    @include box-sizing;
+    border-radius: 50%;
+    background-color: rgb(167, 165, 156);
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    font-size: 10px;
+    cursor: pointer;
+    span {
+      font-size: 15px;
+    }
+    &:hover {
+      border: $border-hover;
+    }
+  }
+}
+
+// .########..########..########....###....##....##
+// .##.....##.##.....##.##.........##.##...##...##.
+// .##.....##.##.....##.##........##...##..##..##..
+// .########..########..######...##.....##.#####...
+// .##.....##.##...##...##.......#########.##..##..
+// .##.....##.##....##..##.......##.....##.##...##.
+// .########..##.....##.########.##.....##.##....##
+
+@media (min-width: $breakpoint-1) {
+
+  .container {
+    max-width: $breakpoint-2;
+  }
+
+
+
+}
+
+
+
+// .########..########..########....###....##....##
+// .##.....##.##.....##.##.........##.##...##...##.
+// .##.....##.##.....##.##........##...##..##..##..
+// .########..########..######...##.....##.#####...
+// .##.....##.##...##...##.......#########.##..##..
+// .##.....##.##....##..##.......##.....##.##...##.
+// .########..##.....##.########.##.....##.##....##
+
+@media (min-width: $breakpoint-2) {
+
+  .container {
+    max-width: $breakpoint-2;
+  }
+
+  .controls-block {
+    padding-top: 30px;
+    .main-banner {
+      vertical-align: middle;
+      @include box-sizing;
+      width: auto;
+      height: 90px;
+      font-size: 18px;
+      line-height: 50px;
+      margin-right: 15px;
+    }
+    .button {
+      margin-right: 10px;
+      vertical-align: middle;
+      margin-bottom: 30px;
+      span {
+      }
+    }
+  }
+
+}
+
+// F:\work\che-land-new\css\scss:F:\work\che-land-new\css

@@ -1,0 +1,29 @@
+.my-balloon {
+  width: auto;
+  max-width: 100%;
+  background-color: #ccc;
+  border: 2px solid #999;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+// .########..########..########....###....##....##
+// .##.....##.##.....##.##.........##.##...##...##.
+// .##.....##.##.....##.##........##...##..##..##..
+// .########..########..######...##.....##.#####...
+// .##.....##.##...##...##.......#########.##..##..
+// .##.....##.##....##..##.......##.....##.##...##.
+// .########..##.....##.########.##.....##.##....##
+
+@media (min-width: $breakpoint-0) and (max-width: $breakpoint-1) {
+  .my-balloon {
+    left: 0 !important;
+    top: 0 !important;
+  }
+}
+
+@media (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+  .my-balloon {
+  }
+}

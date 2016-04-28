@@ -1,0 +1,13 @@
+@mixin transform-skew($deg...) {
+  -webkit-transform: skew($deg);
+  -moz-transform: skew($deg);
+  -ms-transform: skew($deg);
+  -o-transform: skew($deg);
+  transform: skew($deg);
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
