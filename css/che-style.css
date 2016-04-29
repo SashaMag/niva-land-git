@@ -29,7 +29,8 @@
   width: 100%; }
 
 .special-offer-buy-form {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   margin: 0 auto; }
 
 .special-offer-buy-form input[type="text"],
@@ -56,8 +57,7 @@
 .special-offer-buy-form button[type="button"] {
   border: none;
   outline: none;
-  background-color: #ddd9c3;
-  border: 3px solid #fd9946;
+  background-color: #0a2f81;
   color: white;
   padding: 15px;
   margin-top: 25px;
@@ -65,9 +65,10 @@
   font-weight: bold;
   font-size: 17px;
   cursor: pointer; }
+  .special-offer-buy-form button[type="button"]:hover {
+    background: #017 !important; }
 
 .special-offer-buy-form button[type="button"]:hover {
-  border: 3px solid red;
   color: #fff !important; }
 
 .special-offer-buy-form h3 {
@@ -259,6 +260,31 @@ body {
       font-size: 15px; }
     .controls-block .button:hover {
       border: 3px solid red; }
+
+.special-offer__btn-block {
+  text-align: center;
+  margin-top: 20px; }
+  .special-offer__btn-block .btn {
+    background-color: #0a2f81;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "RobotoBold";
+    font-size: 12px;
+    height: 50px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 124px; }
+    .special-offer__btn-block .btn:last-child {
+      margin-right: 0; }
+    .special-offer__btn-block .btn:hover {
+      background: #017 !important; }
 
 @media (min-width: 600px) {
   .container {

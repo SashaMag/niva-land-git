@@ -72,22 +72,33 @@ body {
 
 // additional
 
-.special-offer-new .btn {
-  background-color: #0a2f81;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "RobotoBold";
-  font-size: 12px;
-  height: 50px;
-  margin-right: 8px;
-  padding-top: 10px;
+.special-offer__btn-block {
   text-align: center;
-  text-transform: uppercase;
-  vertical-align: top;
-  width: 13%;
+  margin-top: 20px;
+ .btn {
+    background-color: #0a2f81;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "RobotoBold";
+    font-size: 12px;
+    height: 50px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 124px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: #017 !important;
+    }
+  }
 }
 
 // .########..########..########....###....##....##
