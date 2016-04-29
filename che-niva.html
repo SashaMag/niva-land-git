@@ -1,121 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Спецпредложение: Шевроле Нива</title>
-  <link rel="stylesheet" href="css/che-style.css">
-  <link rel="stylesheet" href="fonts/fonts.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Спецпредложение: Шевроле Нива</title>
+    <link rel="stylesheet" href="css/che-style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
-  <body>
-    <div class="container">
-      <div class="company-logo"></div>
-      <div class="main-image-block">
+<body>
+<div class="container">
+    <div class="company-logo"></div>
+    <div class="main-image-block">
         <img src="img/niva-land.jpg" alt="Специальное предложение" class="main-image">
         <div class="signs-of-honor"></div>
-      </div>
-      <div class="controls-block">
+    </div>
+
+
+
+    <div class="controls-block">
+
         <div class="main-banner">
-          <span>Новая Chevrolet Niva с выгодой 100 000 р.*</span>
+            <span>Новая Chevrolet Niva с выгодой 100 000 р.*</span>
         </div>
         <div class="button button-1"><span>Кредит</span><br>с гос<br>поддержкой</div>
         <div class="button button-2"><span>Тест-драйв</span></div>
         <div class="button button-3"><span>Обмен</span><br>утилизация</div>
         <div class="button button-4"><span>Дарим</span><br> полный привод</div>
-      </div>
-      <div class="text-block">
+    </div>
+
+
+
+    <div class="special-offer__btn-block">
+
+        <label class="special-offer__label-pagination" for="special-offer-prices"
+               onclick="scrollToAnchor('special-offer__prices-block');"><span class="btn cheniva btn-1">Комплектации<br> и цены</span>
+        </label>
+
+        <label class="special-offer__label-pagination" for="special-offer-in-stock"
+               onclick="scrollToAnchor('special-offer__in-stock');"><span class="btn cheniva btn-3">Автомобили <br>в наличии</span>
+        </label>
+
+        <div class="btn cheniva btn-4 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(0);">
+            <span class="btn-span btn-span-4">Запрос на <br>покупку</span>
+        </div>
+
+        <div class="btn cheniva btn-6 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(1);">
+            <span class="btn-span btn-span-6">Трейд-ин /<br>Утилизация</span>
+        </div>
+
+        <div class="btn cheniva btn-7 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(2);">
+            <span class="btn-span btn-span-7">Запрос на<br>кредит</span>
+        </div>
+
+        <div class="btn cheniva btn-5 popbutton" data-window="special-offer-test-drive-popup" onclick="typeOfReq(3);">
+            <span class="btn-span btn-span-5">Запишись на<br>тест-драйв</span>
+        </div>
+
+        <div class="btn cheniva btn-2 popbutton" data-window="special-offer-recall-popup" onclick="typeOfReq(4);">
+            Заказать
+            <br> звонок
+        </div>
+
+
+    </div>
+
+
+    <div class="text-block">
         <p><strong>100 000 р.</strong> выгода!</p>
         <p><strong>75 000 р.</strong> скидка* на автомобили Шевроле Нива от официального дилера Торгмаш</p>
         <p><strong>25 000 - 50 000 р.</strong> дополнительного оборудования в подарок!</p>
 
         <form class="special-offer-buy-form" name="trade-in-form">
-          <h3 style="text-align:center">Получите лучшее предложение!</h3><br>
-          <span>Ваше имя</span>
-          <br>
-          <input type="text" id="trade-in-form__name" placeholder="Фамилия, имя, отчество" name="Имя">
-          <br>
-          <span>Ваш телефон</span>
-          <br>
-          <input type="text" id="trade-in-form__phone" placeholder="Телефон" name="Телефон" class="required-phone">
-          <br>
-          <span>Электронная почта</span>
-          <br>
-          <input type="text" id="trade-in-form__mail" required="" placeholder="Электронная почта" class="required-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email">
-
-
-          <select class="special-offer-buy-form__select-complectation_tradein" name="Niva, комплектация">
-            <option class="option-complectation-pickup" value="Выберите комплектацию">Выберите комплектацию</option>
-            <option value="Niva L">Niva L  - цена 555000</option>
-            <option value="Niva LC">Niva LC - цена 589000</option>
-            <option value="Niva LE ">Niva LE  - цена 619000</option>
-            <option value="Niva GLS">Niva GLS - цена 630000</option>
-            <option value="Niva GLC ">Niva GLC  - цена 658000</option>
-            <option value="Niva LE+ ">Niva LE+  - цена 668000</option>
-          </select>
-          <br>
-
-          <input type="radio" name="Покупатель" id="trade-in-form-physical" value="физическое лицо">
-          <label for="trade-in-form-physical">Физическое лицо</label>
-          <input type="radio" name="Покупатель" id="trade-in-form-entity" value="Юридическое лицо">
-          <label for="trade-in-form-entity">Юридическое лицо</label>
-          <br>
-          <br>
-          <span>Способ покупки</span>
-          <br>
-          <br>
-
-          <input type="radio" name="Способ покупки" value="Наличные" id="trade-in-cash">
-          <label>За наличные</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" name="Способ покупки" value="Кредит" id="trade-in-credit">
-          <label>В кредит</label>
-          <br><br>
-
-
-          <span>Желаете ли сдать авто в качестве первого взноса?</span>
-          <select name="Утилизация или трейд-ин" id="sell-car-type">
-            <option value="Без сдачи авто" id="select-no-sell">Без сдачи авто</option>
-            <option value="Утилизация" id="select-utilization">Утилизация</option>
-            <option value="трейд-ин" id="select-trade-in">Трейд-ин</option>
-          </select>
-
-          <div class="trade-in-block-utilization">
-
-            <span>Марка/модель сдаваемого авто</span>
+            <h3 style="text-align:center">Получите лучшее предложение!</h3><br>
+            <span>Ваше имя</span>
             <br>
-            <input type="text" id="trade-in-form__model-car" placeholder="Марка/модель сдаваемого авто" name="Сдаваемое авто">
+            <input type="text" id="trade-in-form__name" placeholder="Фамилия, имя, отчество" name="Имя">
+            <br>
+            <span>Ваш телефон</span>
+            <br>
+            <input type="text" id="trade-in-form__phone" placeholder="Телефон" name="Телефон" class="required-phone">
+            <br>
+            <span>Электронная почта</span>
+            <br>
+            <input type="text" id="trade-in-form__mail" required="" placeholder="Электронная почта"
+                   class="required-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email">
+
+
+            <select class="special-offer-buy-form__select-complectation_tradein" name="Niva, комплектация">
+                <option class="option-complectation-pickup" value="Выберите комплектацию">Выберите комплектацию</option>
+                <option value="Niva L">Niva L - цена 555000</option>
+                <option value="Niva LC">Niva LC - цена 589000</option>
+                <option value="Niva LE ">Niva LE - цена 619000</option>
+                <option value="Niva GLS">Niva GLS - цена 630000</option>
+                <option value="Niva GLC ">Niva GLC - цена 658000</option>
+                <option value="Niva LE+ ">Niva LE+ - цена 668000</option>
+            </select>
             <br>
 
-            <span>Год выпуска сдаваемого авто</span>
+            <input type="radio" name="Покупатель" id="trade-in-form-physical" value="физическое лицо">
+            <label for="trade-in-form-physical">Физическое лицо</label>
+            <input type="radio" name="Покупатель" id="trade-in-form-entity" value="Юридическое лицо">
+            <label for="trade-in-form-entity">Юридическое лицо</label>
             <br>
-            <input type="text" id="trade-in-form__year-of-issue" placeholder="Год выпуска" name="Год выпуска">
+            <br>
+            <span>Способ покупки</span>
+            <br>
             <br>
 
-            <span>Пробег сдаваемого авто</span>
+            <input type="radio" name="Способ покупки" value="Наличные" id="trade-in-cash">
+            <label>За наличные</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="Способ покупки" value="Кредит" id="trade-in-credit">
+            <label>В кредит</label>
+            <br><br>
+
+
+            <span>Желаете ли сдать авто в качестве первого взноса?</span>
+            <select name="Утилизация или трейд-ин" id="sell-car-type">
+                <option value="Без сдачи авто" id="select-no-sell">Без сдачи авто</option>
+                <option value="Утилизация" id="select-utilization">Утилизация</option>
+                <option value="трейд-ин" id="select-trade-in">Трейд-ин</option>
+            </select>
+
+            <div class="trade-in-block-utilization">
+
+                <span>Марка/модель сдаваемого авто</span>
+                <br>
+                <input type="text" id="trade-in-form__model-car" placeholder="Марка/модель сдаваемого авто"
+                       name="Сдаваемое авто">
+                <br>
+
+                <span>Год выпуска сдаваемого авто</span>
+                <br>
+                <input type="text" id="trade-in-form__year-of-issue" placeholder="Год выпуска" name="Год выпуска">
+                <br>
+
+                <span>Пробег сдаваемого авто</span>
+                <br>
+                <input type="text" id="trade-in-form__mileage" placeholder="Пробег" name="Пробег">
+                <br>
+
+                <textarea name="Описание сдаваемого авто" id="sell-car__description"
+                          placeholder="Описание сдаваемого авто"></textarea>
+
+            </div>
+
+            <span>Выберите автосалон</span>
             <br>
-            <input type="text" id="trade-in-form__mileage" placeholder="Пробег" name="Пробег">
             <br>
-
-            <textarea name="Описание сдаваемого авто" id="sell-car__description" placeholder="Описание сдаваемого авто"></textarea>
-
-          </div>
-
-          <span>Выберите автосалон</span>
-          <br>
-          <br>
-          <input type="radio" name="Автосалон" id="trade-in-form-88km" value="88 км МКАД">
-          <label for="trade-in-form-88km">88км МКАД</label>
-          <!--<input type="radio" name="Автосалон" id="trade-in-form-mariino" value="Марьино">-->
-          <!--<label for="trade-in-form-mariino">ул. Иловайская, 2Б</label>-->
-          <button type="button" onclick="sendgetbest_main('лучшее предложение', 'special-offer-buy-form-popup'); requiredMail()" class="button-submit">Отправить</button>
+            <input type="radio" name="Автосалон" id="trade-in-form-88km" value="88 км МКАД">
+            <label for="trade-in-form-88km">88км МКАД</label>
+            <!--<input type="radio" name="Автосалон" id="trade-in-form-mariino" value="Марьино">-->
+            <!--<label for="trade-in-form-mariino">ул. Иловайская, 2Б</label>-->
+            <button type="button"
+                    onclick="sendgetbest_main('лучшее предложение', 'special-offer-buy-form-popup'); requiredMail()"
+                    class="button-submit">Отправить
+            </button>
         </form>
 
-        <p><i>Предложение действительно до 30 апреля 2016 года, распространяется на все комплектации автомобилей Шевроле Нива.</i></p>
-        <p><i>*скидка в размере 75 000 р. действует в рамках  государственной программы "Утилизации и Обмена (Trade-In)", данная скидка суммируется с Акцией доп. оборудование в подарок на сумму 25 000 р.</i>
-          <i>Акция 50 000 р. Доп. оборудования в подарок  действует при покупке автомобилей Шевроле Нива без Гос программы «Утилизация и Обмен (Trade-In)», подробности в отделе продаж Шевроле Нива по телефону +7 495 230-77-55</i></p>
-      </div>
+        <p><i>Предложение действительно до 30 апреля 2016 года, распространяется на все комплектации автомобилей Шевроле
+            Нива.</i></p>
+        <p><i>*скидка в размере 75 000 р. действует в рамках государственной программы "Утилизации и Обмена (Trade-In)",
+            данная скидка суммируется с Акцией доп. оборудование в подарок на сумму 25 000 р.</i>
+            <i>Акция 50 000 р. Доп. оборудования в подарок действует при покупке автомобилей Шевроле Нива без Гос
+                программы «Утилизация и Обмен (Trade-In)», подробности в отделе продаж Шевроле Нива по телефону +7 495
+                230-77-55</i></p>
     </div>
-    <script src="js/jquery.balloon.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/script-form.js"></script>
-  </body>
+</div>
+<script src="js/jquery.balloon.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script-form.js"></script>
+</body>
 </html>
