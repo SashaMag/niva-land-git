@@ -195,7 +195,7 @@ table.price tr:nth-child(3) td {
 
 body {
   font-family: "RobotoRegular";
-  background-color: #f5f5f5; }
+  background-color: #eee; }
 
 .container {
   margin: 0 auto;
@@ -204,6 +204,9 @@ body {
 
 .main-image {
   max-width: 100%; }
+
+.company-phone-img {
+  float: right; }
 
 .controls-block {
   background-color: #ddd9c3;
@@ -245,7 +248,6 @@ body {
     border: 3px solid #fd9946;
     margin-right: 4%;
     margin-bottom: 20px;
-    padding-top: 17px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -260,6 +262,10 @@ body {
       font-size: 15px; }
     .controls-block .button:hover {
       border: 3px solid red; }
+    .controls-block .button-1, .controls-block .button-4 {
+      padding-top: 17px; }
+    .controls-block .button-3, .controls-block .button-2 {
+      padding-top: 20px; }
 
 .special-offer__btn-block {
   text-align: center;
