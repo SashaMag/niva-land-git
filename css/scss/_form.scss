@@ -114,8 +114,8 @@
   transition: all .3s;
 }
 
-#special-offer-prices:checked ~ .special-offer-new .special-offer__prices-block,
-#special-offer-in-stock:checked ~ .special-offer-new .special-offer__in-stock {
+#special-offer-prices:checked ~ .text-block .special-offer__prices-block,
+#special-offer-in-stock:checked ~ .text-block .special-offer__in-stock {
   height: auto;
   font-size: 1em;
   overflow: visible;
