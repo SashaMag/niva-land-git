@@ -169,7 +169,15 @@ body {
 }
 
 
-
+// price , but need to be polish
+.price td {text-align: center; padding: 3px; border-left: 1px solid #d9d0a7; font-size: 10pt}
+.price .header {background: #fcfbf6;}
+.price .header td {border-bottom: 1px solid #d9d0a7; border-left: none; text-align: left; font-weight: 700;}
+.price .prices td {text-align: center; font-weight: 100;}
+.price .odd {background: #f8f6e9;}
+.price .even {background: #efebd5;}
+.price .title {text-align: left; border-left: none;}
+.price .prices .title {text-align: left; font-weight: 700;}
 
 
 // F:\work\che-land-new\css\scss:F:\work\che-land-new\css
