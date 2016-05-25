@@ -440,7 +440,7 @@ function uniqq() {
     });
 });
 
-// start
+// start & metric
 var typeOfRequest;
 var NivaDataForMetricSend =  new Array('clickNivaLandingBuyCarSend', 'clickNivaLandingTreidInUtilSend', 'clickNivaLandingCreditSend', 'clickNivaLandingTestDriveSend', 'clickNivaCollBackSend');
 var NivaDataForMetricPopup = new Array('clickNivaLandingBuyCarPopUp', 'clickNivaLandingTreidInUtilPopUp', 'clickNivaLandingCreditPopUp', 'clickNivaLandingTestDrivePopUp', 'clickNivaCollBackPopUp')
