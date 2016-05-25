@@ -76,7 +76,7 @@ var ex = document.referrer; //
 
 //console.log(ex);
 
-searchSource();
+//searchSource();
 
 function searchSource(){
     
@@ -163,6 +163,12 @@ function sendgetbest(about, container) {
             alert('Ваша заявка успешно отправлена.' + "\n\n" + 'Номер ' + uniq);
 
             $(':input').val('');
+
+            //metric Niva
+            if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+
+                yaCounter7291771.reachGoal(NivaDataForMetricSend[req]);
+            }
         }
     });
 
@@ -206,6 +212,12 @@ function sendgetbest_main(about, container) { // sendUtilTradein
             alert('Ваша заявка успешно отправлена.' + "\n\n" + 'Номер ' + uniq);
 
             $(':input').val('');
+
+            //metric Niva
+            if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+
+                yaCounter7291771.reachGoal('clickNivaLandingBuyCarPopUp');
+            }
         }
     });
 
@@ -430,13 +442,22 @@ function uniqq() {
 
 // start
 var typeOfRequest;
-//                                  0                               1                          2                    3                     4                                       
+var NivaDataForMetricSend =  new Array('clickNivaLandingBuyCarSend', 'clickNivaLandingTreidInUtilSend', 'clickNivaLandingCreditSend', 'clickNivaLandingTestDriveSend', 'clickNivaCollBackSend');
+var NivaDataForMetricPopup = new Array('clickNivaLandingBuyCarPopUp', 'clickNivaLandingTreidInUtilPopUp', 'clickNivaLandingCreditPopUp', 'clickNivaLandingTestDrivePopUp', 'clickNivaCollBackPopUp')
+//                       clickNivaLandingBuyCarPopUp       clickNivaLandingTreidInUtilPopUp   clickNivaLandingCreditPopUp    clickNivaLandingTestDrivePopUp     clickNivaCollBackPopUp
+//                                  0                               1                                   2                                3                        4
 var typeOfOrder = new Array("Заявка на приобритение", "Заявка на Утилизацию/трейд-ин", "Заявка на кредит", "Запрос на тест-драйв", "Запрос звонка");
-function  typeOfReq(req) {
+function typeOfReq(req) {
 
     typeOfRequest = typeOfOrder[req];
 
-    console.log(req);
+    //metric Niva
+    if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+
+        yaCounter7291771.reachGoal(NivaDataForMetricPopup[req]);
+    }
+
+    //console.log(location.protocol + '//' + location.host + location.pathname);
 }
 // end
 
